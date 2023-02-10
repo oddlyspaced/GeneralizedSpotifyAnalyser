@@ -249,7 +249,7 @@ def getInformation(thisList, verbose=False):
 				 'duration_ms':thisFeature[0]['duration_ms']
 				 }]
 			thisDf = pd.DataFrame(thisDict)
-			sampleDataFrame = sampleDataFrame.append(thisDf, ignore_index=True)
+			sampleDataFrame = pd.concat([sampleDataFrame, thisDf], ignore_index=True)
 
 	
 	# do a check here to see if empty 
